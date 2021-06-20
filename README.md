@@ -3,6 +3,11 @@
 An example of the implementation authorization and registration functionality in REST API, using jwt.
 <br />
 
+- **Demo**
+  https://ieffai.github.io/jwt-auth-client <br />
+
+---
+
 - **Server Part**
   https://github.com/ieffai/jwt-auth-server
 
@@ -20,6 +25,8 @@ An example of the implementation authorization and registration functionality in
   ### On server: express, mongoDB, nodemailer, cors, cookie-parser
 
 ---
+
+## ![env](./demo1.png)
 
 **For suggestions and errors:**
 4923920@gmail.com
