@@ -3,9 +3,9 @@
 An example of the implementation authorization and registration functionality in REST API, using jwt.
 <br />
 
-- **Demo**
+- **Server Part**
 
-  Temporary unavaliable ;-(
+  https://github.com/ieffai/jwt-auth-server
 
 ---
 
