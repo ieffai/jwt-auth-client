@@ -8,10 +8,12 @@ export default class Store {
     user = {};
     isAuth = false;
     isLoading = false;
+    error = null;
 
     constructor() {
-        makeAutoObservable(this);
+        makeAutoObservable(this, {}, { autoBind: true });
     }
+   
     setAuth(bool) {
         this.isAuth = bool;
     }
@@ -21,13 +23,17 @@ export default class Store {
     setLoading(bool) {
         this.isLoading = bool;
     }
+
+    setError(error) {
+        this.error = error;
+    }
     async login(email, password) {
         try {
             const response = await AuthService.login(email, password);
-            console.log(response);
             localStorage.setItem('token', response.data.accessToken);
             this.setAuth(true);
             this.setUser(response.data.user);
+            console.log(response.data.user.email);
         } catch(error) {
             console.log(error.response?.data?.message);
         }
@@ -37,7 +43,7 @@ export default class Store {
         try {
             await AuthService.registration(email, password);
         } catch(error) {
-            console.log(error);
+            this.setError(error);
         }
     }
 
@@ -56,7 +62,6 @@ export default class Store {
         this.setLoading(true);
         try {
             const response = await axios.get(`${API_URL}/refresh`, {withCredentials: true});
-            console.log(response);
             localStorage.setItem('token', response.data.accessToken);
             this.setAuth(true);
             this.setUser(response.data.user);

@@ -1,5 +1,6 @@
 import React from 'react';
-import LoginForm from './components/LoginForm';
+import { Header } from './components';
+import { Home } from './pages';
 import { Context } from './index';
 import { observer } from 'mobx-react-lite'
 import UserService from "./services/UserServices";
@@ -23,39 +24,16 @@ function App() {
       console.log(error);
     }
   }
-
   if (store.isLoading) {
     return <div>...Loading</div>
   }
-
-  if (!store.isAuth) {
     return(
-      <div>
-        <LoginForm />
-        <button onClick={getUsers}>Get users</button>
-      </div>
-
+      <>
+        {/* //тут что-то не понятное, прокидываю, но в хедере не достаю, но без этого - не работает... */}
+        <Header a={store.isAuth}/> 
+        <Home />
+      </>
     )
-  }
-
-  return (
-    <div>
-      <h1>{store.isAuth ? `User authorized as ${store.user.email}` : 'Please sign in'} </h1>
-      <h2>{store.user.isActivated ? `Account ${store.user.email} is activated` : 'PLEASE ACTIVATE YOUR ACCOUNT'}</h2>
-      <button onClick={() => store.logout()}>Log Out</button>
-      <div>
-        <button onClick={getUsers}>Get users</button>
-      </div>
-      {
-          users.map((user) => 
-            <div key={user.email}>{user.email} </div>
-          )
-        }
-      
-
-    </div>
-
-  );
 }
 
 export default observer(App);
