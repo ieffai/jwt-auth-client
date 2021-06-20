@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/jwt-auth-client/static/css/main.95ec6878.chunk.css",
+    "main.js": "/jwt-auth-client/static/js/main.297666c2.chunk.js",
+    "main.js.map": "/jwt-auth-client/static/js/main.297666c2.chunk.js.map",
+    "runtime-main.js": "/jwt-auth-client/static/js/runtime-main.aa4bde6b.js",
+    "runtime-main.js.map": "/jwt-auth-client/static/js/runtime-main.aa4bde6b.js.map",
+    "static/js/2.e9b805a2.chunk.js": "/jwt-auth-client/static/js/2.e9b805a2.chunk.js",
+    "static/js/2.e9b805a2.chunk.js.map": "/jwt-auth-client/static/js/2.e9b805a2.chunk.js.map",
+    "index.html": "/jwt-auth-client/index.html",
+    "static/css/main.95ec6878.chunk.css.map": "/jwt-auth-client/static/css/main.95ec6878.chunk.css.map",
+    "static/js/2.e9b805a2.chunk.js.LICENSE.txt": "/jwt-auth-client/static/js/2.e9b805a2.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.aa4bde6b.js",
+    "static/js/2.e9b805a2.chunk.js",
+    "static/css/main.95ec6878.chunk.css",
+    "static/js/main.297666c2.chunk.js"
+  ]
+}
